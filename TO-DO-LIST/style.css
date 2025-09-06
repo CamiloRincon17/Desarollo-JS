@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #b4c9ff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #9147a8;
+  color: #17ea5a;
+  padding: 3rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(112, 28, 28, 0.07);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem 0;
+}
+
+input[type="text"] {
+  padding: 0.7rem;
+  border: 1px solid #ff00dd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 250px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #4f8cff;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #c234c0;
+}
+
+ul#lista-tareas {
+  list-style: none;
+  padding: 0;
+  max-width: 367px;
+  margin: 0 auto;
+}
+
+ul#lista-tareas li {
+  background: #7dbcff;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+ul#lista-tareas button {
+  background: #ff4f4f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+ul#lista-tareas button:hover {
+  background: #c23c3c;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
