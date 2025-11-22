@@ -1,5 +1,5 @@
-<template id="fondoTemplate">
-  <div id="fondo" class="container mt-5 col-md-4">
+<template>
+  <div class="container mt-5 col-md-4">
     <h3>Iniciar Sesión</h3>
     <input v-model="usuario" class="form-control mb-2" placeholder="Usuario" />
     <input v-model="clave" type="password" class="form-control mb-2" placeholder="Contraseña" />
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import usersData from '@/assets/usuarios.json'
+
 export default {
   data() {
     return {
@@ -19,12 +21,11 @@ export default {
   },
   methods: {
     login() {
-      const users = [
-        { user: 'admin', pass: '1234' },
-        { user: 'adrian', pass: '1111' }
-      ]
+      // Buscar usuario en el archivo JSON importado
+      const valido = usersData.find(
+        (u) => u.user === this.usuario && u.pass === this.clave
+      )
 
-      const valido = users.find(u => u.user === this.usuario && u.pass === this.clave)
       if (valido) {
         localStorage.setItem('logueado', 'true')
         this.$router.push('/dashboard')
@@ -35,12 +36,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-#fondo {
-  background-color: #4582c0; /* Un color de fondo gris claro */
-  padding:4rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una sombra suave */
-}
-
-</style>
